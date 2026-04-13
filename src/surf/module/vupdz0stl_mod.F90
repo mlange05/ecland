@@ -2,6 +2,8 @@ MODULE VUPDZ0STL_MOD
 
 USE PARKIND1  , ONLY : JPIM, JPRB
 
+IMPLICIT NONE
+
 PRIVATE PZ0WN
 PUBLIC  VUPDZ0STL
 
@@ -135,7 +137,6 @@ USE YOMSURF_SSDP_MOD
 
 !     ------------------------------------------------------------------
 
-IMPLICIT NONE
 
 INTEGER(KIND=JPIM),INTENT(IN)    :: KLON 
 INTEGER(KIND=JPIM),INTENT(IN)    :: KIDIA 

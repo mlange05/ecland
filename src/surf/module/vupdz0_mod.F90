@@ -131,7 +131,6 @@ USE YOMSURF_SSDP_MOD
 
 !     ------------------------------------------------------------------
 
-IMPLICIT NONE
 
 INTEGER(KIND=JPIM),INTENT(IN)    :: KLON 
 INTEGER(KIND=JPIM),INTENT(IN)    :: KIDIA 
@@ -574,7 +573,6 @@ DO JTILE=1,KTILES
 ENDDO
 END ASSOCIATE
 IF (LHOOK) CALL DR_HOOK('VUPDZ0_MOD:VUPDZ0',1,ZHOOK_HANDLE)
-
 END SUBROUTINE VUPDZ0
 
 ! Function to compute Z0M for neutral wind conditions

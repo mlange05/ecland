@@ -119,7 +119,6 @@ USE YOMSURF_SSDP_MOD
 
 !     ------------------------------------------------------------------
 
-IMPLICIT NONE
 
 INTEGER(KIND=JPIM),INTENT(IN)    :: KLON 
 INTEGER(KIND=JPIM),INTENT(IN)    :: KIDIA 
