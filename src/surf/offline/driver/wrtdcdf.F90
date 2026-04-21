@@ -275,7 +275,7 @@ ENDDO
 
 
 !* store snow and ice fraction for later use
-!$OMP PARALLEL DO PRIVATE(IST,IEND,IBL,IPROMA)
+!$OMP PARALLEL DO PRIVATE(IST,IEND,IBL,IPROMA,IL)
 DO IST = 1, NPOI, NPROMA
   IEND = MIN(IST+NPROMA-1,NPOI)
   IBL = (IST-1)/NPROMA + 1
@@ -315,7 +315,7 @@ ENDWHERE
 
 !* calculation of root zone soil moisture content: all liquid water
 !  above wilting point in layers where roots are found
-!$OMP PARALLEL DO PRIVATE(IST,IEND,IBL,IPROMA)
+!$OMP PARALLEL DO PRIVATE(IST,IEND,IBL,IPROMA,IL,JL,JK)
 DO IST = 1, NPOI, NPROMA
   IEND = MIN(IST+NPROMA-1,NPOI)
   IBL = (IST-1)/NPROMA + 1
