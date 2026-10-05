@@ -93,7 +93,7 @@ else()
   ecbuild_critical( "Currently OpenMP is non-optional, but only for offline file cpg1s.F90" )
 endif()
 
-if( HAVE_ACC AND TARGET OpenACC::OpenACC_Fortran )
+if( HAVE_ACC )
   set( ECLAND_ACC_Fortran_LIBRARIES OpenACC::OpenACC_Fortran )
 endif()
 
