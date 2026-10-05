@@ -17,7 +17,7 @@ SAVE
 
 INTEGER(KIND=JPIM) :: N_VMASS=0
 
-!$acc declare copyin(N_VMASS)
+!$acc declare create(N_VMASS)
 
 !    -----------------------------------------------------------------
 

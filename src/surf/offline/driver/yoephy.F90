@@ -178,6 +178,6 @@ INTEGER (KIND=JPIM) :: NCWS ! Number of layers to merge at the end for the soil 
 
 !     -----------------------------------------------------------------
 
-!$acc declare copyin(LEFLAKE, LESNML, LEURBAN, LVDFTRAC, LBLEND)
+!$acc declare create(LEFLAKE, LESNML, LEURBAN, LVDFTRAC, LBLEND)
 
 END MODULE YOEPHY

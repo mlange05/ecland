@@ -49,6 +49,6 @@ REAL(KIND=JPRB) :: RPARSRF
 !     *RPARSRF*   REAL     *DEPTH OF SURFACE LAYER AS FRACTION OF PBL-H 
 !     ------------------------------------------------------------------
 
-!$acc declare copyin(RVDIFTS)
+!$acc declare create(RVDIFTS)
 
 END MODULE YOEVDF

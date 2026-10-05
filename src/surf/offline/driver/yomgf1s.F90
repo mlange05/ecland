@@ -74,6 +74,6 @@ REAL(KIND=JPRB),POINTER:: FCSF(:,:)
 
 REAL(KIND=JPRB) :: RALT , RZUV
 
-!$acc declare copyin(RALT)
+!$acc declare create(RALT)
 
 END MODULE YOMGF1S
