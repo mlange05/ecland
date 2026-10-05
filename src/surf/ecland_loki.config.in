@@ -113,10 +113,10 @@ block = [
   directive = "openacc"
   remove_unused_vars = true
 
-[transformations.SCCStack]
-  classname = "SCCStackPipeline"
+[transformations.SCCSStack]
+  classname = "SCCSStackPipeline"
   module = "loki.transformations.single_column"
-[transformations.SCCStack.options]
+[transformations.SCCSStack.options]
   horizontal = "%dimensions.horizontal%"
   block_dim = "%dimensions.block_dim%"
   trim_vector_sections = true
@@ -150,11 +150,11 @@ block = [
     'SCCVector', 'ModuleWrapTransformation', 'DependencyTransformation'
   ]
 
-[pipelines.scc-stack]
+[pipelines.sccs-stack]
   transformations = [
     'ArrayShapeAnalysis', 'ArrayShapeSynthesis',
     'RemoveCode', 'Sanitise', 'Inline',
-    'SCCStack', 'ModuleWrapTransformation', 'DependencyTransformation'
+    'SCCSStack', 'ModuleWrapTransformation', 'DependencyTransformation'
   ]
 
 #####################################################################
