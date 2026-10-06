@@ -131,6 +131,20 @@ foreach( prec sp dp )
             --validate=${REFDIR}/reference_2d_gl_t21_nocmf_${prec}.yaml --atol=${ATOL} --rtol=${RTOL}
     )
 
+    # Large global tests run only on HPC CI; reference results are not yet available.
+    ecbuild_add_test( TARGET ecland_ifsbench_2d_gl_tco399_cmf_${prec}
+        TYPE SCRIPT COMMAND ${LAUNCH_COMMAND}
+        ARGS from_yaml ${CMAKE_CURRENT_BINARY_DIR}/test_2d_gl_tco399_${prec}.yaml 2d_gl_tco399_cmf
+            --run-dir=${CMAKE_CURRENT_BINARY_DIR}/ecland_ifsbench_2d_gl_tco399_cmf_${prec}
+        LABELS IFSBENCH LARGE
+    )
+    ecbuild_add_test( TARGET ecland_ifsbench_2d_gl_tco399_nocmf_${prec}
+        TYPE SCRIPT COMMAND ${LAUNCH_COMMAND}
+        ARGS from_yaml ${CMAKE_CURRENT_BINARY_DIR}/test_2d_gl_tco399_${prec}.yaml 2d_gl_tco399_nocmf
+            --run-dir=${CMAKE_CURRENT_BINARY_DIR}/ecland_ifsbench_2d_gl_tco399_nocmf_${prec}
+        LABELS IFSBENCH LARGE
+    )
+
   endif()
 endforeach()
 
