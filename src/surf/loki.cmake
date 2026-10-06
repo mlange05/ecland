@@ -1,8 +1,8 @@
 if( HAVE_LOKI )
   set( LOKI_FRONTEND "fp" CACHE STRING "Frontend parser for Loki source transformations" )
 
-  if( NOT LOKI_MODE MATCHES "^(idem|scc|scc-stack)$" )
-    ecbuild_critical( "Only LOKI_MODE=idem, scc, or scc-stack is currently configured for ecland" )
+  if( NOT LOKI_MODE MATCHES "^(idem|scc|sccs-stack)$" )
+    ecbuild_critical( "Only LOKI_MODE=idem, scc, sccs-stack is currently configured for ecland" )
   endif()
 
   foreach( prec sp dp )
