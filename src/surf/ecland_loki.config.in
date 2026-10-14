@@ -47,7 +47,7 @@ block = [
   index = "JK"
 
 [dimensions.block_dim]
-  size = "NGPBLKS"
+  size = "NBLOCKS"
   index = "IBL"
 
 #####################################################################
@@ -216,6 +216,12 @@ block = [
   lib = 'ecland_surf_@prec@'
 
 [routines.surfpp]
+  role = "kernel"
+  expand = true
+  replicate = true
+  lib = 'ecland_surf_@prec@'
+
+[routines.surfseb]
   role = "kernel"
   expand = true
   replicate = true
