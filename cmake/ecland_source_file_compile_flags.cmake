@@ -35,6 +35,7 @@ if (CMAKE_Fortran_COMPILER_ID MATCHES "PGI|NVHPC")
 
     set_source_files_properties(
             module/vupdz0_mod.F90
+            module/fcz0wn_mod.F90
             module/sppcfl_mod.F90
         PROPERTIES OVERRIDE_COMPILE_FLAGS_BIT "-Mbyteswapio -Kieee -mp -g -O1 -Mvect=idiom -Mflushz -Mno-signed-zeros -Mstack_arrays"
     )
